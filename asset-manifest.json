@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Autotests/static/css/main.0f82520d.css",
+    "main.js": "/Autotests/static/js/main.26f3059d.js",
+    "static/js/787.66cb4309.chunk.js": "/Autotests/static/js/787.66cb4309.chunk.js",
+    "static/media/avatar.png": "/Autotests/static/media/avatar.d947cb9d0d13765666b6.png",
+    "index.html": "/Autotests/index.html",
+    "main.0f82520d.css.map": "/Autotests/static/css/main.0f82520d.css.map",
+    "main.26f3059d.js.map": "/Autotests/static/js/main.26f3059d.js.map",
+    "787.66cb4309.chunk.js.map": "/Autotests/static/js/787.66cb4309.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0f82520d.css",
+    "static/js/main.26f3059d.js"
+  ]
+}
