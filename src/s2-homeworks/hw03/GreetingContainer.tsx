@@ -1,6 +1,7 @@
 import React, { ChangeEvent, KeyboardEvent, useState } from 'react'
 import Greeting from './Greeting'
 import { UserType } from './HW3'
+import user from '../hw08/User';
 type GreetingContainerPropsType = { users: UserType[], addUserCallback: (name: string)=>void }
 export const pureAddUser = (name: string, setError: (error:string)=>void, setName: (name: string)=>void, addUserCallback: (name:string)=>void) => {
     if(name.trim() === '') {
@@ -32,17 +33,9 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
     const onBlur = () => {pureOnBlur(name, setError)}
     const onEnter = (e: KeyboardEvent<HTMLInputElement>) => {pureOnEnter(e, addUser)}
     const totalUsers = users.length
-    const lastUserName=name;
+    const lastUserName=name.trim();
     return (
-        <Greeting
-            name={name}
-            setNameCallback={setNameCallback}
-            addUser={addUser}
-            onBlur={onBlur}
-            onEnter={onEnter}
-            error={error}
-            totalUsers={totalUsers}
-            lastUserName={lastUserName}
+        <Greeting name={name} setNameCallback={setNameCallback}  addUser={addUser} onBlur={onBlur} onEnter={onEnter} error={error} totalUsers={totalUsers} lastUserName={lastUserName}
         />
     )
 }

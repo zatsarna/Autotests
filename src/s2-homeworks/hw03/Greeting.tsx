@@ -41,7 +41,6 @@ const Greeting: React.FC<GreetingPropsType> = ({name, setNameCallback, addUser, 
                     onClick={addUser}
                     className={s.button}
                     disabled={!name.trim()}
-                    // ДАВАЙТЕ ПРОСЛЕДИМ БОЕВОЙ ПУТЬ addUser:
                     // ОТСЮДА ОН ВСПЛЫВЕТ В КОМПОНЕНТЕ GreetingContainer И ВЫЗОВЕТ pureAddUser->
                     // А В pureAddUser ЛИБО ВЫДАСТ ОШИБКУ (ЕСЛИ ПУСТОЙ name) ИЛИ ЗАПУТСИТ addUserCallback->
                     // КОТОРЫЙ ВСПЛЫВЕТ В КОМПОНЕНТЕ <HW3/> И ВЫЗОВЕТ pureAddUserCallback->
@@ -51,7 +50,7 @@ const Greeting: React.FC<GreetingPropsType> = ({name, setNameCallback, addUser, 
             </div>
             {lastUserName && (
                 <div className={s.greeting}>
-                    Привет <span id={'hw3-last-user'}>{lastUserName}</span>!
+                    Привет! <span id={'hw3-last-user'}>{lastUserName}</span>!
                 </div>
             )}
         </div>
