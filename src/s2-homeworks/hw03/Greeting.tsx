@@ -12,12 +12,7 @@ type GreetingPropsType = {
 }
 const Greeting: React.FC<GreetingPropsType> = ({name, setNameCallback, addUser, onEnter, onBlur, error, totalUsers,lastUserName,}
 ) => {
-    let inputClass;
-    if (name.trim()===""){
-        inputClass=s.errorInput
-    }else {
-        inputClass= s.input
-    }
+    const inputClass = error ? s.errorInput : s.input
     return (
         <div id={'hw3-form'} className={s.greetingForm}>
             <div className={s.text}>
@@ -41,10 +36,6 @@ const Greeting: React.FC<GreetingPropsType> = ({name, setNameCallback, addUser, 
                     onClick={addUser}
                     className={s.button}
                     disabled={!name.trim()}
-                    // ОТСЮДА ОН ВСПЛЫВЕТ В КОМПОНЕНТЕ GreetingContainer И ВЫЗОВЕТ pureAddUser->
-                    // А В pureAddUser ЛИБО ВЫДАСТ ОШИБКУ (ЕСЛИ ПУСТОЙ name) ИЛИ ЗАПУТСИТ addUserCallback->
-                    // КОТОРЫЙ ВСПЛЫВЕТ В КОМПОНЕНТЕ <HW3/> И ВЫЗОВЕТ pureAddUserCallback->
-                    // КОТОРЫЙ СОЗДАСТ НОВЫЙ ОБЪЕКТ И ЗАСЕТАЕТ ЕГО В users НЕ ПОТЕРЯВ И СТАРЫХ ЮЗЕРОВ
                 >Add
                 </button>
             </div>

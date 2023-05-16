@@ -2,11 +2,10 @@ import React, {useState} from 'react'
 import {v1} from 'uuid'
 import s2 from '../../s1-main/App.module.css'
 import GreetingContainer from './GreetingContainer'
-/*в файле Greeting.tsx вычислить inputClass в зависимости от наличия ошибки */
 export type UserType = { _id: string, name: string }
 export const pureAddUserCallback = (name: string, setUsers: (arr: UserType[]) => void, users: UserType[]) => {
     const user = {_id: v1(), name: name}
-    setUsers([user, ...users])
+    setUsers([user,...users])
 }
 
 const HW3 = () => {

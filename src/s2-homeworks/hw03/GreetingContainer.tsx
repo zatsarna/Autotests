@@ -7,8 +7,8 @@ export const pureAddUser = (name: string, setError: (error:string)=>void, setNam
     if(name.trim() === '') {
         setError('Ошибка! Введите имя!')
     }else {
-        addUserCallback(name);
-        setName("")
+        setName(name)
+        addUserCallback(name)
     }
 }
 export const pureOnBlur = (name: string, setError: (err:string)=>void) => {
@@ -29,11 +29,11 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
         setName(e.currentTarget.value)
         error && setError('')
     }
-    const addUser = () => {pureAddUser(name, setError, setName, addUserCallback)}
+    const addUser = () => {pureAddUser(name, setError, setName, addUserCallback); setName("")}
     const onBlur = () => {pureOnBlur(name, setError)}
     const onEnter = (e: KeyboardEvent<HTMLInputElement>) => {pureOnEnter(e, addUser)}
     const totalUsers = users.length
-    const lastUserName=name.trim();
+    const lastUserName=users.length >0 ? users[0].name : ""
     return (
         <Greeting name={name} setNameCallback={setNameCallback}  addUser={addUser} onBlur={onBlur} onEnter={onEnter} error={error} totalUsers={totalUsers} lastUserName={lastUserName}
         />
