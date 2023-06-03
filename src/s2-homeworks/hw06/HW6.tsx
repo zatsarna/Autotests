@@ -20,6 +20,8 @@ const HW6 = () => {
     const restore = () => {
         // делают студенты
         // ЗАСЕТАТЬ(restoreState<ТИПИЗАЦИЯ>(КЛЮЧ,''))
+        let valueFromLS=restoreState<string>('hw6-editable-span-value', 'enter text...')
+        setValue(valueFromLS)
     }
 
     return (
