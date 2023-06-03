@@ -20,7 +20,7 @@ const HW6 = () => {
     const restore = () => {
         // делают студенты
         // ЗАСЕТАТЬ(restoreState<ТИПИЗАЦИЯ>(КЛЮЧ,''))
-        let valueFromLS=restoreState<string>('hw6-editable-span-value', 'enter text...')
+        let valueFromLS=restoreState<string>('hw6-editable-span-value', 'Enter text...')
         setValue(valueFromLS)
     }
 
@@ -37,7 +37,7 @@ const HW6 = () => {
                         onChangeText={setValue}
                         spanProps={{
                             id: 'hw6-editable-span',
-                            defaultText: 'enter text...',
+                            defaultText: 'Enter text...',
                         }}
                     />
                 </div>

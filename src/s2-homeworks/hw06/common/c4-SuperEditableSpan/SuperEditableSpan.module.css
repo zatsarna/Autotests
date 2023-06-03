@@ -1,11 +1,27 @@
 .spanBlock {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .span {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #0080FF;
+
 }
 
 .input {
+    position: absolute;
+    border: 1px solid #D1D1D1;
+    border-radius: 5px;
 }
 
 .pen {
+    color: #0080FF;
+    width: 24px;
+    height: 24px;
 }
