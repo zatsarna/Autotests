@@ -12,7 +12,7 @@ function Clock() {
     const start = () => {
 
         // повторить с интервалом 0 секунды
-        setTimerId(Number(setInterval(() => setDate( new Date()) )))
+        setTimerId(Number(setInterval(() => setDate( new Date()),0 )))
 
 
 
