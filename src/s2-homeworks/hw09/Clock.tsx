@@ -2,7 +2,6 @@ import React, {useState} from 'react'
 import SuperButton from '../hw04/common/c2-SuperButton/SuperButton'
 import {restoreState} from '../hw06/localStorage/localStorage'
 import s from './Clock.module.css'
-
 function Clock() {
     const [timerId, setTimerId] = useState<number | undefined>(undefined)
     // for autotests // не менять // можно подсунуть в локалСторэдж нужную дату, чтоб увидеть как она отображается
@@ -10,17 +9,10 @@ function Clock() {
     const [show, setShow] = useState<boolean>(false)
 
     const start = () => {
-
-        // повторить с интервалом 0 секунды
-        setTimerId(Number(setInterval(() => setDate( new Date()),0 )))
-
-
-
+        setTimerId(Number(setInterval(() => setDate( new Date()),1 )))  // повторить с интервалом 1 секунды
         // пишут студенты // запустить часы (должно отображаться реальное время, а не +1)
         // сохранить ид таймера (https://learn.javascript.ru/settimeout-setinterval#setinterval)
-
     }
-
     const stop = () => {
         setTimeout(() => { clearInterval(timerId) }, 0);
         setTimerId(undefined)

@@ -1,3 +1,13 @@
 .loader {
-    /*свг и/или анимация*/
+    border-top: 10px solid #3498db; /* Blue border on top */
+    border-radius: 50%; /* Circular shape */
+    width: 100px; /* Width of the loader */
+    height: 100px; /* Height of the loader */
+    animation: spin 2s linear infinite; /* Animation properties */
+    margin: 0 auto; /* Center the loader */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); } /* Start position */
+    100% { transform: rotate(360deg); } /* End position */
 }
